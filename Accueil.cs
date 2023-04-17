@@ -2,7 +2,7 @@ namespace Morpion
 {
     public partial class Accueil : Form
     {
-        frmPlayers unFrmPlayers;
+        private frmPlayers unFrmPlayers;
         public Accueil()
         {
             InitializeComponent();

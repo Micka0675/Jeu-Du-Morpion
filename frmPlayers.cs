@@ -14,6 +14,7 @@ namespace Morpion
    
     public partial class frmPlayers : Form
     {
+        private frmGame zoneJeu;
         internal MJoueur joueur1;
         internal MJoueur joueur2;
         public frmPlayers()
@@ -57,38 +58,36 @@ namespace Morpion
                 }
             }
 
-            if (emptyData > 0 && charIntruderVerif > 0)
+            if(emptyData > 0 || charIntruderVerif > 0)
             {
-                result = MessageBox.Show(messageGen, typeMessage, buttons);
-                if (result == DialogResult.OK)
+                if (emptyData > 0 && charIntruderVerif > 0)
                 {
-                    this.Close();
+                    result = MessageBox.Show(messageGen, typeMessage, buttons);
+                    
+                }
+
+                if (emptyData > 0 && charIntruderVerif == 0)
+                {
+                    result = MessageBox.Show(messageIncomplet, typeMessage, buttons);
+                   
+                }
+
+                if (emptyData == 0 && charIntruderVerif > 0)
+                {
+                    result = MessageBox.Show(messageCharPbm, typeMessage, buttons);
                 }
             }
-
-            if(emptyData > 0 && charIntruderVerif == 0) 
+            else
             {
-                result = MessageBox.Show(messageIncomplet, typeMessage, buttons);
-                if (result == DialogResult.OK)
-                {
-                    this.Close();
-                }
+                zoneJeu = new frmGame(pseudoJoueur1,pseudoJoueur2);
+               
+                zoneJeu.ShowDialog();
             }
-
-            if (emptyData == 0 && charIntruderVerif > 0)
-            {
-                result = MessageBox.Show(messageCharPbm, typeMessage, buttons);
-                if (result == DialogResult.OK)
-                {
-                    this.Close();
-                }
-            }
-
- 
 
             joueur1 = new MJoueur(nomJoueur1, prenomJoueur1, pseudoJoueur1);
             joueur2 = new MJoueur(nomJoueur2, prenomJoueur2, pseudoJoueur2);
 
+           
         }
     }
 }

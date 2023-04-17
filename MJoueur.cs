@@ -8,6 +8,7 @@ namespace Morpion
 {
     internal class MJoueur
     {
+        private frmGame formulR;
         /// <summary>
         /// attribut nom du joueur
         /// </summary>

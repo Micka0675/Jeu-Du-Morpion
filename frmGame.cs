@@ -12,9 +12,19 @@ namespace Morpion
 {
     public partial class frmGame : Form
     {
-        public frmGame()
+        private frmGame formulR;
+        private MJoueur joueur1;
+        private MJoueur joueur2;
+
+        public frmGame(string joueur1,string joueur2)
         {
             InitializeComponent();
+            string pseudJ1 = joueur1;
+            string pseudJ2 = joueur2;  
         }
+
+        
+
+
     }
 }
