@@ -36,3 +36,4 @@ C:\Users\Micka\Documents\GitHub\Micka0675\Jeu-Du-Morpion\obj\Debug\net6.0-window
 C:\Users\Micka\Documents\GitHub\Micka0675\Jeu-Du-Morpion\obj\Debug\net6.0-windows\Morpion.pdb
 C:\Users\Micka\Documents\GitHub\Micka0675\Jeu-Du-Morpion\obj\Debug\net6.0-windows\Morpion.genruntimeconfig.cache
 C:\Users\Micka\Documents\GitHub\Micka0675\Jeu-Du-Morpion\obj\Debug\net6.0-windows\ref\Morpion.dll
+C:\Users\Micka\Documents\GitHub\Micka0675\Jeu-Du-Morpion\obj\Debug\net6.0-windows\Morpion.frmGame.resources

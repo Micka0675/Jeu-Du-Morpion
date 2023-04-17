@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,12 +23,16 @@ namespace Morpion
 
         private void validInfos_Click(object sender, EventArgs e)
         {
+            string message;
             string typeMessage = "ERREUR";
-            string message = "Veuillez compléter tous les champs pour jouer";$
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            string messageIncomplet = "Au moins un champ n'est pas complet. Appuyez sur Ok pour recommencer.";
+            string messageGen = "Au moins un champ n'est pas complet et des caractères non autorisés ont été detectés. Appuyez sur Ok pour recommencer.";
+            string messageCharPbm = "Seuls les caractères alphanumériques et le symbole '_' sont autorisés. Appuyez sur Ok pour recommencer.";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;
 
-            int emptyData = 0;
+            int emptyData = 0, charIntruderVerif = 0;
+
             //recupération des données du joueur 1 saisies
             string nomJoueur1 = nom1TextBox.Text;
             string prenomJoueur1 = prenom1TextBox.Text;
@@ -38,25 +43,48 @@ namespace Morpion
             string prenomJoueur2 = prenom2TextBox.Text;
             string pseudoJoueur2 = pseudo2TextBox.Text;
 
-            List<string> dataPlayers = new List<string>() { nomJoueur1,prenomJoueur1,pseudoJoueur1,nomJoueur2,prenomJoueur2,pseudoJoueur2};
-
+            List<string> dataPlayers = new List<string>() {nomJoueur1,prenomJoueur1,pseudoJoueur1,nomJoueur2,prenomJoueur2,pseudoJoueur2};
+            
             foreach(string elem in dataPlayers)
             {
-                if(elem == "")
+                if(elem == "" || elem == null)
                 {
                     emptyData++;
-                    
+                }
+                if (!Regex.IsMatch(elem, @"^[a-zA-Z0-9_]+$") && elem !="")
+                {
+                    charIntruderVerif++;
                 }
             }
 
-            if(emptyData > 0) 
+            if (emptyData > 0 && charIntruderVerif > 0)
             {
-                result = MessageBox.Show(typeMessage, message, buttons);
-                if(result == DialogResult.Yes)
+                result = MessageBox.Show(messageGen, typeMessage, buttons);
+                if (result == DialogResult.OK)
                 {
                     this.Close();
                 }
             }
+
+            if(emptyData > 0 && charIntruderVerif == 0) 
+            {
+                result = MessageBox.Show(messageIncomplet, typeMessage, buttons);
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+
+            if (emptyData == 0 && charIntruderVerif > 0)
+            {
+                result = MessageBox.Show(messageCharPbm, typeMessage, buttons);
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+
+ 
 
             joueur1 = new MJoueur(nomJoueur1, prenomJoueur1, pseudoJoueur1);
             joueur2 = new MJoueur(nomJoueur2, prenomJoueur2, pseudoJoueur2);
