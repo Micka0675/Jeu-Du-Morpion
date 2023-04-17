@@ -8,6 +8,5 @@ namespace Morpion
 {
     internal class MPartie
     {
-        
     }
 }
