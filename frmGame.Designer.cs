@@ -1,6 +1,6 @@
 ﻿namespace Morpion
 {
-    partial class Form1
+    partial class frmGame
     {
         /// <summary>
         /// Required designer variable.
