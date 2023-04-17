@@ -8,7 +8,7 @@ namespace Morpion
             InitializeComponent();
         }
 
-        private void startButton_Click(object sender, System.EventArgs e) 
+        private void playButton_Click(object sender, EventArgs e)
         {
             unFrmPlayers.ShowDialog();
         }
