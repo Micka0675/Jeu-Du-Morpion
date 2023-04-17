@@ -171,6 +171,7 @@
             this.validInfos.TabIndex = 14;
             this.validInfos.Text = "Let\'s Go !";
             this.validInfos.UseVisualStyleBackColor = true;
+            this.validInfos.Click += new System.EventHandler(this.validInfos_Click);
             // 
             // frmPlayers
             // 
