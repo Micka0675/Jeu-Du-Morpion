@@ -53,6 +53,7 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(262, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 83);
@@ -62,6 +63,7 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(355, 36);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 83);
@@ -71,6 +73,7 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(448, 36);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 83);
@@ -80,6 +83,7 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(262, 125);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 83);
@@ -89,6 +93,7 @@
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.Location = new System.Drawing.Point(355, 125);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(87, 83);
@@ -98,6 +103,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.Location = new System.Drawing.Point(448, 125);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 83);
@@ -107,6 +113,7 @@
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.Location = new System.Drawing.Point(262, 214);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 83);
@@ -116,6 +123,7 @@
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.Location = new System.Drawing.Point(355, 214);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(87, 83);
@@ -125,6 +133,7 @@
             // button9
             // 
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.Location = new System.Drawing.Point(448, 214);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(87, 83);
@@ -199,11 +208,12 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(99, 320);
+            this.textBox1.Location = new System.Drawing.Point(97, 339);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(612, 60);
+            this.textBox1.Size = new System.Drawing.Size(612, 28);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // quitButton
             // 
@@ -214,6 +224,7 @@
             this.quitButton.TabIndex = 12;
             this.quitButton.Text = "Quitter";
             this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // frmGame
             // 
