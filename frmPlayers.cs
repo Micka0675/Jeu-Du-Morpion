@@ -81,15 +81,11 @@ namespace Morpion
             else
             {
                 
-                
-
-
+                //changement de form
                 this.Hide();
                 zoneJeu = new frmGame(pseudoJoueur1, pseudoJoueur2);
-               
-
-
                 zoneJeu.ShowDialog();
+                this.Close();
                 
             }
 
