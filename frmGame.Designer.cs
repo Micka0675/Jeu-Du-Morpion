@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,104 +46,114 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.histoDataGridView = new System.Windows.Forms.DataGridView();
             this.InProgressDataGridView = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.quitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.histoDataGridView)).BeginInit();
+            this.histoDataGridView = new System.Windows.Forms.DataGridView();
+            this.score1 = new System.Windows.Forms.TextBox();
+            this.score2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.InProgressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(262, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 83);
             this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(355, 36);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 83);
             this.button2.TabIndex = 1;
+            this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(448, 36);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 83);
             this.button3.TabIndex = 2;
+            this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(262, 125);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 83);
             this.button4.TabIndex = 3;
+            this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.Location = new System.Drawing.Point(355, 125);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(87, 83);
             this.button5.TabIndex = 4;
+            this.button5.TabStop = false;
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.Location = new System.Drawing.Point(448, 125);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 83);
             this.button6.TabIndex = 5;
+            this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.Location = new System.Drawing.Point(262, 214);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 83);
             this.button7.TabIndex = 6;
+            this.button7.TabStop = false;
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.Location = new System.Drawing.Point(355, 214);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(87, 83);
             this.button8.TabIndex = 7;
+            this.button8.TabStop = false;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.Location = new System.Drawing.Point(448, 214);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(87, 83);
             this.button9.TabIndex = 8;
+            this.button9.TabStop = false;
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // histoDataGridView
-            // 
-            this.histoDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
-            this.histoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.histoDataGridView.Location = new System.Drawing.Point(564, 36);
-            this.histoDataGridView.Name = "histoDataGridView";
-            this.histoDataGridView.RowTemplate.Height = 25;
-            this.histoDataGridView.Size = new System.Drawing.Size(223, 261);
-            this.histoDataGridView.TabIndex = 9;
             // 
             // InProgressDataGridView
             // 
@@ -173,7 +187,7 @@
             this.InProgressDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.InProgressDataGridView.EnableHeadersVisualStyles = false;
             this.InProgressDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            this.InProgressDataGridView.Location = new System.Drawing.Point(11, 36);
+            this.InProgressDataGridView.Location = new System.Drawing.Point(12, 36);
             this.InProgressDataGridView.Name = "InProgressDataGridView";
             this.InProgressDataGridView.ReadOnly = true;
             this.InProgressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -187,6 +201,7 @@
             this.InProgressDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.InProgressDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.InProgressDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.InProgressDataGridView.RowTemplate.Height = 25;
             this.InProgressDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -197,23 +212,109 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(99, 320);
+            this.textBox1.Location = new System.Drawing.Point(219, 339);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(612, 60);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(361, 28);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TabStop = false;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.WordWrap = false;
             // 
             // quitButton
             // 
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quitButton.Location = new System.Drawing.Point(660, 398);
+            this.quitButton.Location = new System.Drawing.Point(331, 398);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(127, 40);
             this.quitButton.TabIndex = 12;
             this.quitButton.Text = "Quitter";
             this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
+            // histoDataGridView
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            this.histoDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.histoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.histoDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.histoDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.histoDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
+            this.histoDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.histoDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.histoDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.histoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.histoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.histoDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.histoDataGridView.EnableHeadersVisualStyles = false;
+            this.histoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            this.histoDataGridView.Location = new System.Drawing.Point(565, 36);
+            this.histoDataGridView.Name = "histoDataGridView";
+            this.histoDataGridView.ReadOnly = true;
+            this.histoDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.histoDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.histoDataGridView.RowHeadersVisible = false;
+            this.histoDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.histoDataGridView.RowTemplate.Height = 25;
+            this.histoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.histoDataGridView.Size = new System.Drawing.Size(223, 261);
+            this.histoDataGridView.TabIndex = 13;
+            this.histoDataGridView.TabStop = false;
+            // 
+            // score1
+            // 
+            this.score1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
+            this.score1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.score1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.score1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.score1.Location = new System.Drawing.Point(67, 303);
+            this.score1.Multiline = true;
+            this.score1.Name = "score1";
+            this.score1.Size = new System.Drawing.Size(76, 96);
+            this.score1.TabIndex = 14;
+            this.score1.TabStop = false;
+            this.score1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // score2
+            // 
+            this.score2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
+            this.score2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.score2.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.score2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.score2.Location = new System.Drawing.Point(622, 303);
+            this.score2.Multiline = true;
+            this.score2.Name = "score2";
+            this.score2.Size = new System.Drawing.Size(76, 96);
+            this.score2.TabIndex = 15;
+            this.score2.TabStop = false;
+            this.score2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmGame
             // 
@@ -221,10 +322,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.score2);
+            this.Controls.Add(this.score1);
+            this.Controls.Add(this.histoDataGridView);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.InProgressDataGridView);
-            this.Controls.Add(this.histoDataGridView);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -236,8 +339,8 @@
             this.Controls.Add(this.button1);
             this.Name = "frmGame";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.histoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InProgressDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,9 +357,11 @@
         private Button button7;
         private Button button8;
         private Button button9;
-        private DataGridView histoDataGridView;
         private DataGridView InProgressDataGridView;
         private TextBox textBox1;
         private Button quitButton;
+        private DataGridView histoDataGridView;
+        private TextBox score1;
+        private TextBox score2;
     }
 }
