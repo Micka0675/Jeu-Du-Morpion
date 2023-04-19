@@ -29,6 +29,7 @@ namespace Morpion
         Button buttonTarget;
         List<string> histoList;
         string lastWin;
+        DataTable dtHisto;
         public frmGame(string joueur1,string joueur2)
         {
             InitializeComponent();
@@ -48,7 +49,11 @@ namespace Morpion
                 dtGame.Columns.Add("Joueur2");
                 dtGame.Columns.Add("Partie (Sur 6)");
 
-                DataRow row = dtGame.NewRow();
+                dtHisto = new DataTable();
+                dtHisto.Columns.Add("Manche");
+                dtHisto.Columns.Add("Gagnant");
+
+            DataRow row = dtGame.NewRow();
                 row[0] = joueur1;
                 row[1] = joueur2;
                 row[2] = curentGame;
@@ -119,13 +124,12 @@ namespace Morpion
             dtGame.Rows.Add(row);
 
             InProgressDataGridView.DataSource = dtGame;
-            DataTable dtHisto = new DataTable();
+            
 
-            dtHisto.Columns.Add("Manche");
-            dtHisto.Columns.Add("Gagnant");
+            
 
             DataRow row2 = dtHisto.NewRow();
-            row2[0] = countGame;
+            row2[0] = countGame-1;
             row2[1] = lastWin;
             dtHisto.Rows.Add(row2);
 
@@ -248,7 +252,7 @@ namespace Morpion
                         result = MessageBox.Show(message, typeMessage, buttons);
                         if (result == DialogResult.OK)
                         {
-                            this.Close();
+                            Application.Restart();
                         }
                     }
                     else
@@ -259,7 +263,7 @@ namespace Morpion
                             result = MessageBox.Show(message, typeMessage, buttons);
                             if (result == DialogResult.OK)
                             {
-                                this.Close();
+                                Application.Restart();
                             }
                         }
                         if(mortSubite == false)
@@ -275,7 +279,7 @@ namespace Morpion
                             }
                             else
                             {
-                                this.Close();
+                                Application.Restart();
                             }
                         }
                     }
@@ -288,7 +292,7 @@ namespace Morpion
                             result = MessageBox.Show(message, typeMessage, buttons);
                             if (result == DialogResult.OK)
                             {
-                                this.Close();
+                                Application.Restart();
                             }
                             else
                             {
@@ -298,7 +302,7 @@ namespace Morpion
                                     result = MessageBox.Show(message, typeMessage, buttons);
                                     if (result == DialogResult.OK)
                                     {
-                                        this.Close();
+                                        Application.Restart();
                                     }
                                 }
                                 else
@@ -310,6 +314,10 @@ namespace Morpion
                     }
                 }
 
+            }
+            else
+            {
+                lastWin = "Match nul"; 
             }
         }
 
