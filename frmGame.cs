@@ -27,6 +27,8 @@ namespace Morpion
         string typeMessage;
         bool mortSubite;
         Button buttonTarget;
+        List<string> histoList;
+        string lastWin;
         public frmGame(string joueur1,string joueur2)
         {
             InitializeComponent();
@@ -80,6 +82,7 @@ namespace Morpion
                 buttonTarget.Enabled = false;
                 this.clickCase = false;
                 textBox1.Text = pseudJ2 +" , Choisissez une case";
+                
             }
             else
             {
@@ -103,24 +106,37 @@ namespace Morpion
         //methode de reinitialization de la grille
         private void reinitialize(string j1,string j2)
         {
-     
+            DataTable dtGame = new DataTable();
+            dtGame.Columns.Add("Joueur1");
+            dtGame.Columns.Add("Joueur2");
+            dtGame.Columns.Add("Partie (Sur 6)");
+
+            string curentGame = countGame.ToString();
+            DataRow row = dtGame.NewRow();
+            row[0] = pseudJ1;
+            row[1] = pseudJ2;
+            row[2] = curentGame;
+            dtGame.Rows.Add(row);
+
+            InProgressDataGridView.DataSource = dtGame;
+            DataTable dtHisto = new DataTable();
+
+            dtHisto.Columns.Add("Manche");
+            dtHisto.Columns.Add("Gagnant");
+
+            DataRow row2 = dtHisto.NewRow();
+            row2[0] = countGame;
+            row2[1] = lastWin;
+            dtHisto.Rows.Add(row2);
+
+            histoDataGridView.DataSource = dtHisto;
+
+
             foreach (Button buttonInform in this.Controls.OfType<Button>())
             {
                     buttonInform.Enabled = true;
                     buttonInform.BackColor = Color.FromArgb(255, 173, 0);
-                    DataTable dtGame = new DataTable();
-                    dtGame.Columns.Add("Joueur1");
-                    dtGame.Columns.Add("Joueur2");
-                    dtGame.Columns.Add("Partie (Sur 6)");
-
-                    string curentGame = countGame.ToString();
-                    DataRow row = dtGame.NewRow();
-                    row[0] = pseudJ1;
-                    row[1] = pseudJ2;
-                    row[2] = curentGame;
-                    dtGame.Rows.Add(row);
-
-                    InProgressDataGridView.DataSource = dtGame;
+                    
 
 
                     if (buttonInform != quitButton)
@@ -205,10 +221,12 @@ namespace Morpion
                 if(symbol == "O")
                 {
                     victoryJ1++;
+                    lastWin = pseudJ1;
                 }
                 else 
                 {
                     victoryJ2++;
+                    lastWin = pseudJ2;
                 }
 
                 
