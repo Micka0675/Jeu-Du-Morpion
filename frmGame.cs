@@ -18,22 +18,28 @@ namespace Morpion
         bool clickCase = true;
         int nbreClick;
         int countGame;
-        string pseudJ1;
+        string pseudJ1; 
         string pseudJ2;
         string curentGame;
         int victoryJ1;
         int victoryJ2;
+        string message;
+        string typeMessage;
+        bool mortSubite;
         Button buttonTarget;
         public frmGame(string joueur1,string joueur2)
         {
             InitializeComponent();
-            victoryJ1 = 0;
-            victoryJ2 = 0;
-            countGame = 1;
-            pseudJ1 = joueur1;
-            pseudJ2 = joueur2;
-            curentGame = countGame.ToString();
+                //initialisation
+                victoryJ1 = 0;
+                victoryJ2 = 0;
+                countGame = 1;
+                pseudJ1 = joueur1;
+                pseudJ2 = joueur2;
+                curentGame = countGame.ToString();
                 nbreClick = 0;
+                
+                
                 //dataTable pour afficher les infos de parties dans le dgv prevu
                 DataTable dtGame = new DataTable();
                 dtGame.Columns.Add("Joueur1");
@@ -48,18 +54,20 @@ namespace Morpion
 
                 InProgressDataGridView.DataSource = dtGame;
 
-            textBox1.Text = pseudJ1 + " , Choisissez une case";
+                textBox1.Text = pseudJ1 + " , Choisissez une case";
 
-            //boucle d'ajout d'event sur les boutons ormis le quit button
-            foreach (Button buttonInform in this.Controls.OfType<Button>())
+                //boucle d'ajout d'event sur les boutons ormis le quit button
+                foreach (Button buttonInform in this.Controls.OfType<Button>())
                 {
                     if (buttonInform != quitButton)
                     {
                         buttonInform.Click += new EventHandler(AddEvent_Click);
                     }
                 }
+            
         }
 
+        //methode qui traite le click sur button
         private void AddEvent_Click(object sender, EventArgs e)
         {
 
@@ -90,34 +98,36 @@ namespace Morpion
                 reinitialize(pseudJ1,pseudJ2);
 
             }
-        }
+        } 
 
+        //methode de reinitialization de la grille
         private void reinitialize(string j1,string j2)
         {
      
             foreach (Button buttonInform in this.Controls.OfType<Button>())
             {
+                    buttonInform.Enabled = true;
+                    buttonInform.BackColor = Color.FromArgb(255, 173, 0);
+                    DataTable dtGame = new DataTable();
+                    dtGame.Columns.Add("Joueur1");
+                    dtGame.Columns.Add("Joueur2");
+                    dtGame.Columns.Add("Partie (Sur 6)");
+
+                    string curentGame = countGame.ToString();
+                    DataRow row = dtGame.NewRow();
+                    row[0] = pseudJ1;
+                    row[1] = pseudJ2;
+                    row[2] = curentGame;
+                    dtGame.Rows.Add(row);
+
+                    InProgressDataGridView.DataSource = dtGame;
+
+
+                    if (buttonInform != quitButton)
+                    {
+                        buttonInform.Text = "";
+                    }
                 
-                buttonInform.Enabled = true;
-                buttonInform.BackColor = Color.FromArgb(255,173,0);
-                DataTable dtGame = new DataTable();
-                dtGame.Columns.Add("Joueur1");
-                dtGame.Columns.Add("Joueur2");
-                dtGame.Columns.Add("Partie (Sur 6)");
-
-                string curentGame = countGame.ToString();
-                DataRow row = dtGame.NewRow();
-                row[0] = pseudJ1;
-                row[1] = pseudJ2;
-                row[2] = curentGame;
-                dtGame.Rows.Add(row);
-
-                InProgressDataGridView.DataSource = dtGame;
-                if (buttonInform != quitButton)
-                {
-                    buttonInform.Text = "";
-                }
-
             }
             Thread.Sleep(2000);
         }
@@ -204,7 +214,84 @@ namespace Morpion
                 
                 countGame++;
                 nbreClick = 0;
-                reinitialize(pseudJ1, pseudJ2);
+                if(countGame <= 6)
+                {
+                    reinitialize(pseudJ1, pseudJ2);
+                }
+                else
+                {
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result;
+                    typeMessage = "FIN DE PARTIE";
+
+                    if (victoryJ1 > victoryJ2 && countGame <= 6 && mortSubite == false)
+                    {
+                        message = $"{pseudJ1} a gagné ! Felicitations";
+                        result = MessageBox.Show(message, typeMessage, buttons);
+                        if (result == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        if (victoryJ1 < victoryJ2 && countGame <= 6 && mortSubite == false)
+                        {
+                            message = pseudJ2 + "a gagné ! Felicitations";
+                            result = MessageBox.Show(message, typeMessage, buttons);
+                            if (result == DialogResult.OK)
+                            {
+                                this.Close();
+                            }
+                        }
+                        if(mortSubite == false)
+                        {
+                            message = "Match nul! Bravo à tous les deux! Voulez tenter la mort subite? (Y) Oui (N) Quitter";
+                            buttons = MessageBoxButtons.YesNo;
+                            result = MessageBox.Show(message, typeMessage, buttons);
+                            if (result == DialogResult.Yes)
+                            {
+                                mortSubite = true;
+                                reinitialize(pseudJ1, pseudJ2);
+
+                            }
+                            else
+                            {
+                                this.Close();
+                            }
+                        }
+                    }
+                    
+                    if (mortSubite == true)
+                    {
+                        if (victoryJ1 > victoryJ2 )
+                        {
+                            message = $"{pseudJ1} a gagné ! Felicitations";
+                            result = MessageBox.Show(message, typeMessage, buttons);
+                            if (result == DialogResult.OK)
+                            {
+                                this.Close();
+                            }
+                            else
+                            {
+                                if (victoryJ1 < victoryJ2)
+                                {
+                                    message = pseudJ2 + "a gagné ! Felicitations";
+                                    result = MessageBox.Show(message, typeMessage, buttons);
+                                    if (result == DialogResult.OK)
+                                    {
+                                        this.Close();
+                                    }
+                                }
+                                else
+                                {  
+                                    reinitialize(pseudJ1, pseudJ2);
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
 
