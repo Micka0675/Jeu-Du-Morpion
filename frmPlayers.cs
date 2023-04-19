@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace Morpion
 {
@@ -79,9 +80,17 @@ namespace Morpion
             }
             else
             {
-                zoneJeu = new frmGame(pseudoJoueur1,pseudoJoueur2);
+                
+                
+
+
+                this.Hide();
+                zoneJeu = new frmGame(pseudoJoueur1, pseudoJoueur2);
                
+
+
                 zoneJeu.ShowDialog();
+                
             }
 
             joueur1 = new MJoueur(nomJoueur1, prenomJoueur1, pseudoJoueur1);

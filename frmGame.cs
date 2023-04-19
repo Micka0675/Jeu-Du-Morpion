@@ -30,6 +30,9 @@ namespace Morpion
         List<string> histoList;
         string lastWin;
         DataTable dtHisto;
+        string show1;
+        string show2;
+
         public frmGame(string joueur1,string joueur2)
         {
             InitializeComponent();
@@ -41,6 +44,9 @@ namespace Morpion
                 pseudJ2 = joueur2;
                 curentGame = countGame.ToString();
                 nbreClick = 0;
+                
+                score1.Text = "0";
+                score2.Text = "0"; 
                 
                 
                 //dataTable pour afficher les infos de parties dans le dgv prevu
@@ -61,7 +67,7 @@ namespace Morpion
 
                 InProgressDataGridView.DataSource = dtGame;
 
-                textBox1.Text = pseudJ1 + " , Choisissez une case";
+                textBox1.Text = pseudJ1 + " , c'est à vous!";
 
                 //boucle d'ajout d'event sur les boutons ormis le quit button
                 foreach (Button buttonInform in this.Controls.OfType<Button>())
@@ -86,7 +92,7 @@ namespace Morpion
                 buttonTarget.Text = "O"; 
                 buttonTarget.Enabled = false;
                 this.clickCase = false;
-                textBox1.Text = pseudJ2 +" , Choisissez une case";
+                textBox1.Text = pseudJ2 + " , c'est à vous!";
                 
             }
             else
@@ -94,7 +100,7 @@ namespace Morpion
                 buttonTarget.Text = "X";
                 buttonTarget.Enabled = false;
                 this.clickCase = true;
-                textBox1.Text = pseudJ1 + " , Choisissez une case";
+                textBox1.Text = pseudJ1 + " , c'est à vous!";
             }
 
             checkIfWin();
@@ -149,6 +155,7 @@ namespace Morpion
                     }
                 
             }
+
             Thread.Sleep(2000);
         }
 
@@ -226,11 +233,13 @@ namespace Morpion
                 {
                     victoryJ1++;
                     lastWin = pseudJ1;
+                    score1.Text = victoryJ1.ToString();
                 }
                 else 
                 {
                     victoryJ2++;
                     lastWin = pseudJ2;
+                    score2.Text = victoryJ2.ToString();
                 }
 
                 

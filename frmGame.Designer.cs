@@ -37,7 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,6 +50,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.quitButton = new System.Windows.Forms.Button();
             this.histoDataGridView = new System.Windows.Forms.DataGridView();
+            this.score1 = new System.Windows.Forms.TextBox();
+            this.score2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.InProgressDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.histoDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -186,7 +187,7 @@
             this.InProgressDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.InProgressDataGridView.EnableHeadersVisualStyles = false;
             this.InProgressDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            this.InProgressDataGridView.Location = new System.Drawing.Point(11, 36);
+            this.InProgressDataGridView.Location = new System.Drawing.Point(12, 36);
             this.InProgressDataGridView.Name = "InProgressDataGridView";
             this.InProgressDataGridView.ReadOnly = true;
             this.InProgressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -200,6 +201,7 @@
             this.InProgressDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.InProgressDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.InProgressDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.InProgressDataGridView.RowTemplate.Height = 25;
             this.InProgressDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -210,19 +212,23 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(97, 339);
+            this.textBox1.Location = new System.Drawing.Point(219, 339);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(612, 28);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(361, 28);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TabStop = false;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.WordWrap = false;
             // 
             // quitButton
             // 
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quitButton.Location = new System.Drawing.Point(660, 398);
+            this.quitButton.Location = new System.Drawing.Point(331, 398);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(127, 40);
             this.quitButton.TabIndex = 12;
@@ -262,7 +268,7 @@
             this.histoDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.histoDataGridView.EnableHeadersVisualStyles = false;
             this.histoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            this.histoDataGridView.Location = new System.Drawing.Point(564, 36);
+            this.histoDataGridView.Location = new System.Drawing.Point(565, 36);
             this.histoDataGridView.Name = "histoDataGridView";
             this.histoDataGridView.ReadOnly = true;
             this.histoDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -275,13 +281,40 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.histoDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.histoDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(0)))));
-            this.histoDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.histoDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.histoDataGridView.RowTemplate.Height = 25;
             this.histoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.histoDataGridView.Size = new System.Drawing.Size(223, 261);
             this.histoDataGridView.TabIndex = 13;
             this.histoDataGridView.TabStop = false;
+            // 
+            // score1
+            // 
+            this.score1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
+            this.score1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.score1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.score1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.score1.Location = new System.Drawing.Point(67, 303);
+            this.score1.Multiline = true;
+            this.score1.Name = "score1";
+            this.score1.Size = new System.Drawing.Size(76, 96);
+            this.score1.TabIndex = 14;
+            this.score1.TabStop = false;
+            this.score1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // score2
+            // 
+            this.score2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
+            this.score2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.score2.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.score2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.score2.Location = new System.Drawing.Point(622, 303);
+            this.score2.Multiline = true;
+            this.score2.Name = "score2";
+            this.score2.Size = new System.Drawing.Size(76, 96);
+            this.score2.TabIndex = 15;
+            this.score2.TabStop = false;
+            this.score2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmGame
             // 
@@ -289,6 +322,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(1)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.score2);
+            this.Controls.Add(this.score1);
             this.Controls.Add(this.histoDataGridView);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.textBox1);
@@ -326,5 +361,7 @@
         private TextBox textBox1;
         private Button quitButton;
         private DataGridView histoDataGridView;
+        private TextBox score1;
+        private TextBox score2;
     }
 }
